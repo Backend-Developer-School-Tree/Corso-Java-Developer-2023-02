@@ -32,7 +32,7 @@ public class ListaDiInteri {
             tmp[i] = values[i];
         // aggiungiamo il nuovo valore in ultima posizione
         tmp[values.length] = value;
-        // salviamo nel campo tecnici il riferimento in memoria dell'array esteso con il nuovo tecnico
+        // salviamo nel campo values il riferimento in memoria dell'array esteso con il nuovo valore
         values = tmp;
     }
 
