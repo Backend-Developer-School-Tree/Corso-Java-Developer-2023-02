@@ -27,6 +27,15 @@ public class Tecnico {
             stato = StatoTecnico.RIPARAZIONE;
     }
 
+    public boolean terminaRiparazione() {
+        if (riparazione != null) {
+            riparazione.setStato(StatoRiparazione.TERMINATA);
+            setRiparazione(null);
+            return true;
+        }
+        return false;
+    }
+
     public StatoTecnico getStato() {
         return stato;
     }

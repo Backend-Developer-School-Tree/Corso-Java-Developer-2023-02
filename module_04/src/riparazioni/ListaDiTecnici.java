@@ -10,6 +10,8 @@ public class ListaDiTecnici {
 
     private Tecnico[] tecnici = new Tecnico[0];
 
+    public ListaDiTecnici() {}
+
     public ListaDiTecnici(Tecnico[] tecnici) {
         for (Tecnico tecnico : tecnici)
             add(tecnico);

@@ -10,6 +10,8 @@ public class ListaDiRiparazioni {
 
     private Riparazione[] riparazioni = new Riparazione[0];
 
+    public ListaDiRiparazioni() {}
+
     public ListaDiRiparazioni(Riparazione[] riparazioni) {
         for (Riparazione riparazione : riparazioni)
             add(riparazione);

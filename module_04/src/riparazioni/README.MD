@@ -11,7 +11,7 @@ Progettare quindi una classe DittaRiparazioni, che contiene un insieme di tecnic
 * ottenere la lista delle riparazioni in attesa
 * ottenere la prossima riparazione con la maggior priorità
 * assegnare una riparazione ad un tecnico
-* marcare una riparazione come conclusa
+* marcare una riparazione come conclusa (può essere identificata dal nome del tecnico che la sta effettuando)
 * aggiungere un tecnico alla ditta
 * mandare in ferie un insieme di tecnici (identificati per nome)
 

@@ -2,17 +2,20 @@ package riparazioni;
 
 public class DittaRiparazioni {
 
-    private final ListaDiTecnici tecnici;
-    private final ListaDiRiparazioni riparazioni;
+    private final ListaDiTecnici tecnici = new ListaDiTecnici();
+    private final ListaDiRiparazioni riparazioni = new ListaDiRiparazioni();
 
     public DittaRiparazioni(Riparazione[] riparazioni, Tecnico[] tecnici) {
-        this.tecnici = new ListaDiTecnici(tecnici);
-        this.riparazioni = new ListaDiRiparazioni(riparazioni);
+        for (Tecnico tecnico : tecnici)
+            aggiungiTecnico(tecnico);
+
+        for (Riparazione riparazione : riparazioni)
+            aggiungiRiparazione(riparazione);
     }
 
-    public ListaDiTecnici getTecnici(){
-        return tecnici;
-    }
+    public ListaDiTecnici getTecnici(){ return tecnici; }
+
+    public ListaDiRiparazioni getRiparazioni() { return riparazioni; }
 
     public boolean aggiungiRiparazione(Riparazione riparazione) {
         if (esisteRiparazioneDatoIndirizzo(riparazione.getIndirizzo()))
@@ -46,57 +49,49 @@ public class DittaRiparazioni {
         return false;
     }
 
-    public Riparazione[] getRiparazioniInAttesa() {
-        Riparazione[] inAttesa = new Riparazione[riparazioni.length()];
-        int countInAttesa = 0;
+    public ListaDiRiparazioni getRiparazioniInAttesa() {
+        ListaDiRiparazioni riparazioniInAttesa = new ListaDiRiparazioni();
 
         for (int i = 0; i < riparazioni.length(); i++) {
-            if (riparazioni.get(i).getStato().equals(StatoRiparazione.IN_ATTESA))
-            {
-                inAttesa[countInAttesa] = riparazioni.get(i);
-                countInAttesa++;
+            if (riparazioni.get(i).getStato() == StatoRiparazione.IN_ATTESA)
+                riparazioniInAttesa.add(riparazioni.get(i));
+        }
+
+        return riparazioniInAttesa;
+    }
+
+    public Riparazione getRiparazioneMaxPriorita() {
+        Riparazione riparazioneMaxPriorita = null;
+        int maxPriorita = Integer.MIN_VALUE;
+
+        for (int i = 0; i < riparazioni.length(); i++) {
+            if (riparazioni.get(i).getStato() == StatoRiparazione.IN_ATTESA) {
+                if (riparazioni.get(i).getPriorita() > maxPriorita) {
+                    riparazioneMaxPriorita = riparazioni.get(i);
+                    maxPriorita = riparazioneMaxPriorita.getPriorita();
+                }
             }
         }
 
-        return inAttesa;
+        return riparazioneMaxPriorita;
     }
 
-    public ListaDiRiparazioni getRiparazioni() { return riparazioni; }
-
-    public Riparazione getRiparazioneMaxPriorita(){
-        Riparazione risultato = null;
-
-        for (int i = 0; i < riparazioni.length(); i++) {
-
-            if (riparazioni.get(i).getStato().equals(StatoRiparazione.IN_ATTESA))
-            {
-                if (risultato == null)
-                    risultato = riparazioni.get(i);
-                else if (riparazioni.get(i).getPriorita() > risultato.getPriorita())
-                    risultato = riparazioni.get(i);
-            }
-        }
-
-        return risultato;
-    }
-
-    public boolean assegnaProssimaRiparazione(){
-        Tecnico tecnicoLibero = null;
+    public boolean assegnaProssimaRiparazione() {
+        Tecnico tecnicoProssimaRiparazione = null;
         for (int i = 0; i < tecnici.length(); i++) {
-            if (tecnici.get(i).getStato().equals(StatoTecnico.DISPONIBILE))
-            {
-                tecnicoLibero = tecnici.get(i);
+            if (tecnici.get(i).getStato() == StatoTecnico.DISPONIBILE) {
+                tecnicoProssimaRiparazione = tecnici.get(i);
                 break;
             }
         }
 
-        if (tecnicoLibero == null)
+        if (tecnicoProssimaRiparazione == null)
             return false;
 
-        Riparazione maxPriorita = getRiparazioneMaxPriorita();
+        Riparazione riparazioneMaxPriorita = getRiparazioneMaxPriorita();
 
-        maxPriorita.setStato(StatoRiparazione.IN_CORSO);
-        tecnicoLibero.setRiparazione(maxPriorita);
+        tecnicoProssimaRiparazione.setRiparazione(riparazioneMaxPriorita);
+        riparazioneMaxPriorita.setStato(StatoRiparazione.IN_CORSO);
 
         return true;
     }
@@ -104,35 +99,31 @@ public class DittaRiparazioni {
     public boolean setRiparazioneTerminata(String nomeTecnico) {
         Tecnico tecnico = cercaTecnicoPerNome(nomeTecnico);
 
-        if (tecnico == null) {
-            System.out.println("nome tecnico non trovato");
+        if (tecnico == null)
             return false;
-        }
 
-        if (tecnico.getRiparazione() == null) {
-            System.out.println("il tecnico specificato non ha una riparazione in corso");
-            return false;
-        }
+        return tecnico.terminaRiparazione();
+    }
 
-        tecnico.getRiparazione().setStato(StatoRiparazione.TERMINATA);
-        tecnico.setRiparazione(null);
-
-        return true;
+    public boolean setRiparazioneTerminata(Tecnico tecnico) {
+        return setRiparazioneTerminata(tecnico.getNome());
     }
 
     private Tecnico cercaTecnicoPerNome(String nomeTecnico) {
-        for (int i = 0; i < tecnici.length(); i++)
+        for (int i = 0; i < tecnici.length(); i++) {
             if (tecnici.get(i).getNome().equals(nomeTecnico))
                 return tecnici.get(i);
+        }
 
         return null;
     }
 
-    public void mandaTecniciInFerie(ListaDiTecnici tecniciInFerie) {
-        for (int i = 0; i < tecniciInFerie.length(); i++) {
-            Tecnico t = cercaTecnicoPerNome(tecniciInFerie.get(i).getNome());
-            if(t != null)
-                t.vaiInFerie();
+    public void mandaTecniciInFerie(ListaDiTecnici tecniciDaMandareInFerie) {
+        for (int i = 0; i < tecniciDaMandareInFerie.length(); i++) {
+            Tecnico tecnico = cercaTecnicoPerNome(tecniciDaMandareInFerie.get(i).getNome());
+            if (tecnico != null) // se il tecnico esiste all'interno della nostra ditta
+                // allora lo possiamo mandare in ferie (altrimenti non avrebbe senso farlo)
+                tecniciDaMandareInFerie.get(i).vaiInFerie();
         }
     }
 
