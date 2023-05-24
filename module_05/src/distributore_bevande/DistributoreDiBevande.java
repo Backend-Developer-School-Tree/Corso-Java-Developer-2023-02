@@ -1,3 +1,5 @@
+package distributore_bevande;
+
 public class DistributoreDiBevande {
 
     private Prodotto[] prodotti;

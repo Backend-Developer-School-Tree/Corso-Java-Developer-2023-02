@@ -1,3 +1,5 @@
+package live_coding.ereditarieta_polimorfismo;
+
 public class Moto extends Veicolo {
     private int cilindrata;
 

@@ -1,3 +1,5 @@
+package distributore_bevande;
+
 public class Prodotto {
 
     private String codice;
@@ -26,7 +28,7 @@ public class Prodotto {
 
     @Override
     public String toString() {
-        return "Prodotto{" +
+        return "distributore_bevande.Prodotto{" +
                 "codice='" + codice + '\'' +
                 ", prezzo=" + prezzo +
                 '}';
