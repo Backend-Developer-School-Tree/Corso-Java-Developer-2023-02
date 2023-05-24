@@ -1,4 +1,4 @@
-package live_coding.ereditarieta_polimorfismo;
+package live_coding.veicolo_auto_moto;
 
 import java.util.Objects;
 
