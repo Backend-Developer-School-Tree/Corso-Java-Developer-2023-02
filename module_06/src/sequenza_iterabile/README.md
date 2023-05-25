@@ -1,9 +1,9 @@
 ## Sequenza iterabile 🛴
 
 Progettare un'interfaccia `Iterabile` che definisce i seguenti metodi:
-* `Object next()`         che permette di ottenere il prossimo elemento e scorrere la sequenza
-* `boolean hasNext()`     che indica se è presente un prossimo elemento nella sequenza
-* `void reset()`          che resetta l'iterazione (torna all'inizio)
+* `Object next()`         per permettere di ottenere il prossimo elemento e scorrere la sequenza
+* `boolean hasNext()`     per indicare se è presente un prossimo elemento nella sequenza
+* `void reset()`          per resettare l'iterazione (torna all'inizio)
 
 Progettare un'interfaccia `Sequenza` che definisce i seguenti metodi:
 * `get(int i)` che restituisce l'elemento alla posizione i della sequenza
