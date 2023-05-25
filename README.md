@@ -6,14 +6,14 @@ This repo collects all the exercises produced and gathered by [Marco Adriani](ht
 
 # Index
 
-| Module | Subject                      | Contents                                           |
-|--------|------------------------------|----------------------------------------------------|
-| 1      | Java syntax and naming       |                                                    |
-| 2      | ABC dell'informatica in Java |                                                    |
-| 3      | Git                          |                                                    |
-| 4      | Object-Oriented Programming  | [Esercizi](module_04/src/)                         |
-| 5      | Ereditarietà Base            | [Esercizi](module_05/src/), [Esempi](module_05/src/live_coding)         |
-| 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src)                          |
+| Module | Subject                      | Contents                                                                                                                                                                                      |
+|--------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1      | Java syntax and naming       |                                                                                                                                                                                               |
+| 2      | ABC dell'informatica in Java |                                                                                                                                                                                               |
+| 3      | Git                          |                                                                                                                                                                                               |
+| 4      | Object-Oriented Programming  | [Esercizi](module_04/src/), [Esempio Comparable](https://github.com/Backend-Developer-School-Tree/Corso-Java-Developer-2023-02/blob/main/module_04/src/biblioteca/Libro.java?plain=1#L45-L74) |
+| 5      | Ereditarietà Base            | [Esercizi](module_05/src/), [Esempi](module_05/src/live_coding)                                                                                                                               |
+| 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src), [Approfondimento Comparable/Comparator](module_06/src/classifica_serie_a/TestComparison)                                                                                                                                                                   |
 <!--
 | 7      | Generics & Collections       | [Esempi](module_07/src/esempi), [Esercizi](module_07/src) |
 | 8      | Eccezioni e annotazioni      | [Esercizi](module_08/src)                                 |
