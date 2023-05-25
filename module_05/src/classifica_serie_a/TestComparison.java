@@ -34,21 +34,29 @@ public class TestComparison {
 
         classificaSerieA.esitoPartita(lazio, 3, inter, 2);
 
+        // sorting tramite l'ordinamento naturale definito implementando l'interfaccia Comparable
+        // (nel metodo CompareTo della classe Squadra)
         Arrays.sort(squadre);
         System.out.println(Arrays.toString(squadre));
 
         System.out.println("==========================");
 
+        // sorting tramite l'ordinamento definito implementando l'interfaccia Comparator
+        // nella classe SquadraInClassificaComparator (nel metodo compare)
         Arrays.sort(squadre, new SquadraInClassificaComparator());
         System.out.println(Arrays.toString(squadre));
 
         System.out.println("==========================");
 
+        // sorting tramite l'ordinamento definito implementando l'interfaccia Comparator
+        // nella nested class InClassificaComparator della classe Squadra
         Arrays.sort(squadre, new Squadra.InClassificaComparator());
         System.out.println(Arrays.toString(squadre));
 
         System.out.println("==========================");
 
+        // sorting tramite l'ordinamento definito implementando l'interfaccia Comparator
+        // nella classe anonima definita "al volo"
         Arrays.sort(squadre, new Comparator<Squadra>() {
             @Override
             public int compare(Squadra o1, Squadra o2) {
