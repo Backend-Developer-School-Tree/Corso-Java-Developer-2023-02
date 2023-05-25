@@ -1,9 +1,6 @@
 # Lista di interi ordinata
 
-Implementare una classe `ListaDiInteri` mediante un array (con i metodi
-specificati nell'esercizio [ListaDiInteri](https://github.com/Backend-Developer-School-Tree/Corso-Java-Developer-2023-02/tree/main/module_04/src/lista_di_interi)). 
-
-Implementare quindi una classe `ListaOrdinataDiInteri` per creare liste di
+A partire dalla classe dell'esercizio [ListaDiInteri](https://github.com/Backend-Developer-School-Tree/Corso-Java-Developer-2023-02/tree/main/module_04/src/lista_di_interi), implementare una classe `ListaOrdinataDiInteri` per creare liste di
 interi ordinati in modo crescente. La classe ridefinisce i seguenti 3
 metodi di aggiunta:
 - `add(k)` aggiunge un intero: l'intero viene inserito nella posizione
