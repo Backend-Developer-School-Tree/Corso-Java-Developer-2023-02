@@ -16,9 +16,7 @@ public class ClassificaSerieA {
     }
 
     private void sortClassifica() {
-        Arrays.sort(this.classifica, Comparator.comparingInt(Squadra::getPunteggio)
-                .thenComparing(Squadra::getGolFatti)
-                .thenComparing(Squadra::getId).reversed());
+        Arrays.sort(this.classifica, new SquadraInClassificaComparator());
     }
 
     public Squadra[] getClassifica() {
