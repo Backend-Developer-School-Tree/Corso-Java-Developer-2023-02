@@ -14,9 +14,9 @@ This repo collects all the exercises produced and gathered by [Marco Adriani](ht
 | 4      | Object-Oriented Programming  | [Esercizi](module_04/src/), [Esempio Comparable](https://github.com/Backend-Developer-School-Tree/Corso-Java-Developer-2023-02/blob/main/module_04/src/biblioteca/Libro.java?plain=1#L45-L74)       |
 | 5      | Ereditarietà Base            | [Esercizi](module_05/src/), [Esempi](module_05/src/live_coding)                                                                                                                                     |
 | 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src), [Approfondimento Comparable/Comparator](module_06/src/classifica_serie_a/TestComparison), [Esempio Iterable/Iterator](module_06/src/esempio_iterable/ListaDiInteri.java) |
-<!--
-| 7      | Generics & Collections       | [Esempi](module_07/src/esempi), [Esercizi](module_07/src) |
-| 8      | Eccezioni e annotazioni      | [Esercizi](module_08/src)                                 |
+| 7      | Generics & Collections       | [Esempi](module_07/live_coding), [Esercizi](module_07/src)                                                                                                                                          |
+
+<!--| 8      | Eccezioni e annotazioni      | [Esercizi](module_08/src)                                 |
 | 9      | Input & Output               | [Esempi](module_09/src/esempi), [Esercizi](module_09/src) |
 | 10     | Design Patterns              | [Esempi](module_10/src/esempi), [Esercizi](module_10/src) |
 | 11     | Java Stream                  | [Esercizi](module_11)                                     |
