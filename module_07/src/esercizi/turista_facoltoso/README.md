@@ -20,7 +20,7 @@ Deve essere possibile effettuare le seguenti operazioni nel sistema:
 - ottenere il numero medio di posti letto calcolato in base a tutte le abitazioni caricate dagli host
 
 
-Per le date e i periodi potete utilizzare java.time.LocalDateTime e java.time.Duration
+Per le date e i periodi potete utilizzare `java.time.LocalDateTime` e `java.time.Duration`
 esempio:
 
 `
@@ -28,5 +28,6 @@ Period.between(aDate, sixtyDaysBehind);
 `
 
 Nota: inserire eccezioni dove pensate siano opportune
+
 Nota: gestite tutto con le collection, nessun database (per ora!)
 
