@@ -24,6 +24,6 @@ lettera2: [parola1: (significato1;significato2;...;), parola2: (significato1;...
 letteraN: [parola1: (significato1;significato2;...;), parola2: (significato1;...;...;)]
 ```  
 
-Suggerimenti sulle eccezioni da prevedere:
+Eccezioni da prevedere (sentitevi liberi di aggiungerne altre dove pensate possa risultare utile):
 - `WordNotPresentException`: lanciata nel caso in cui la parola da cercare o rimuovere non sia contenuta
 - `MeaningAlreadyExistingException:` lanciata nel caso in cui il significato che vogliamo aggiungere già esista
