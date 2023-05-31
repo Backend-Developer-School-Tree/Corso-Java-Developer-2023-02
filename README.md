@@ -15,7 +15,7 @@ This repo collects all the exercises produced and gathered by [Marco Adriani](ht
 | 5      | Ereditarietà Base            | [Esercizi](module_05/src/), [Esempi](module_05/src/live_coding)                                                                                                                                     |
 | 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src), [Approfondimento Comparable/Comparator](module_06/src/classifica_serie_a/TestComparison), [Esempio Iterable/Iterator](module_06/src/esempio_iterable/ListaDiInteri.java) |
 | 7      | Generics & Collections       | [Esercizi](module_07/src/esercizi)                                                                                                                                                                  |
-| 8      | Eccezioni e annotazioni      | [Esempi eccezioni](module_08/src/esempi/exceptions/src), [Esempio Lombok](module_08/src/esempi/annotations/src/User.java)                                                                                                                                                                      |
+| 8      | Eccezioni e annotazioni      | [Esercizi](module_08/src/esercizi), [Esempi eccezioni](module_08/src/esempi/exceptions/src), [Esempio Lombok](module_08/src/esempi/annotations/src/User.java)                                                                                                                                                                      |
 
 <!--| 9      | Input & Output               | [Esempi](module_09/src/esempi), [Esercizi](module_09/src) |
 | 10     | Design Patterns              | [Esempi](module_10/src/esempi), [Esercizi](module_10/src) |
