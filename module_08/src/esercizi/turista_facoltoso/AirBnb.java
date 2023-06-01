@@ -73,7 +73,7 @@ public class AirBnb {
 
     /**
      * Approva come Host un utente già registrato
-     * 
+     *
      * @param user utente da approvare come host
      * @throws UserNotFoundException se l'utente non è già registrato nella piattaforma
      */
