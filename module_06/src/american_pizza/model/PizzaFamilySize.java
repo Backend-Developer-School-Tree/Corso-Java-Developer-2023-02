@@ -1,11 +1,5 @@
-package model;
+package american_pizza.model;
 
-/**
- *
- * Classe che modella la pizza formato famiglia applicando il sovrapprezzo e
- * raddoppiando le calorie della pizza iniziale
- *
- **/
 public class PizzaFamilySize implements Pizza {
 
 	private Pizza pizza;

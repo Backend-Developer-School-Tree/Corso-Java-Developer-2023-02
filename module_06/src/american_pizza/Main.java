@@ -1,4 +1,6 @@
-import config.MenuManager;
+package american_pizza;
+
+import american_pizza.config.MenuManager;
 
 public class Main {
     public static void main(String[] args) {

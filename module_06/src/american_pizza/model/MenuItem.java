@@ -1,10 +1,4 @@
-package model;
-
-/**
- *
- * Interfaccia di base per gli elementi presenti sul menu
- *
- **/
+package american_pizza.model;
 
 public interface MenuItem {
 

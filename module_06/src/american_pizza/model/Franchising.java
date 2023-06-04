@@ -1,9 +1,5 @@
-package model;
+package american_pizza.model;
 
-/**
- * Classe base per i prodotti di franchising
- *
- **/
 
 public class Franchising implements MenuItem {
 

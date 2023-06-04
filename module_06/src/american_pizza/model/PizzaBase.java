@@ -1,11 +1,5 @@
-package model;
+package american_pizza.model;
 
-/**
- *
- * Classe che implementa una pizza di base da cui si ottengono tutte le altre
- * che devono comparire direttamente nel menu
- *
- **/
 public class PizzaBase implements Pizza {
 
 	private Integer calories;

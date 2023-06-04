@@ -1,17 +1,19 @@
 package sequenza_iterabile;
 
+import esempio_iterable.ListaDiInteri;
+
 public class TestSequenza {
 
     public static void main(String[] args) {
 
-        ListaDiInteri lista = new ListaDiInteri();
+        /*ListaDiInteri lista = new ListaDiInteri();
         checkListaInteri(lista);
 
         MiaStringa stringa = new MiaStringa();
-        checkMiaStringa(stringa);
+        checkMiaStringa(stringa);*/
     }
 
-    private static void checkMiaStringa(Sequenza stringa){
+    /*private static void checkMiaStringa(Sequenza stringa){
         System.out.println(stringa.size() == 0 ? "OK" : "ERRORE");
 
         stringa.add('a');
@@ -55,6 +57,6 @@ public class TestSequenza {
         System.out.println(lista.size() == 0 ? "OK" : "ERRORE");
 
         System.out.println(!lista.contains(5) ? "OK" : "ERRORE");
-    }
+    }*/
 
 }

@@ -1,12 +1,12 @@
-package model;
+package american_pizza.model;
 
-public class OnionsTopping extends PizzaTopping {
+public class HamTopping extends PizzaTopping {
 
-	private final String name = "Onions";
-	private final Double price = 0.69;
-	private final Integer calories = 22;
+	private final String name = "Ham";
+	private final Double price = 0.99;
+	private final Integer calories = 35;
 
-	public OnionsTopping(Pizza pizza) {
+	public HamTopping(Pizza pizza) {
 		super(pizza);
 	}
 

@@ -1,4 +1,4 @@
-package model;
+package american_pizza.model;
 
 public class CheeseTopping extends PizzaTopping {
 

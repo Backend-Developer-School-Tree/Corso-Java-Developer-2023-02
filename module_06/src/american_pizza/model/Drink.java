@@ -1,10 +1,4 @@
-package model;
-
-/**
- * Classe base per i drink da cui vengono derivate tutte le altre bevande
- * presenti sul menu
- *
- **/
+package american_pizza.model;
 
 public class Drink implements FoodItem {
 

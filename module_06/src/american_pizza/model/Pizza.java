@@ -1,4 +1,4 @@
-package model;
+package american_pizza.model;
 
 /**
  * Interfaccia base per le pizze

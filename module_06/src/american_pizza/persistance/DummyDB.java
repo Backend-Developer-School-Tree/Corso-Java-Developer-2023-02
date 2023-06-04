@@ -1,6 +1,6 @@
-package persistance;
+package american_pizza.persistance;
 
-import model.*;
+import american_pizza.model.*;
 
 import java.util.ArrayList;
 import java.util.List;

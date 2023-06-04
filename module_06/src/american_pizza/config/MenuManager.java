@@ -1,7 +1,7 @@
-package config;
+package american_pizza.config;
 
-import model.Pizza;
-import persistance.DummyDB;
+import american_pizza.model.Pizza;
+import american_pizza.persistance.DummyDB;
 
 public class MenuManager {
 

@@ -18,7 +18,7 @@ public class User {
         new User();
         new User(1, "Andrea");
         User user = new User(1, "Andrea", "andrea@opinno.it");
-        System.out.println(user));
+        System.out.println(user);
         System.out.println(user.getEmail());
     }
 }

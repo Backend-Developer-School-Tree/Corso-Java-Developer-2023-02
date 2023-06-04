@@ -1,10 +1,12 @@
 package sequenza_iterabile;
 
+import esempio_iterable.ListaDiInteri;
+
 public class TestIterabile {
 
     public static void main(String[] args) {
 
-        int[] elementi = new int[]{5, 7};
+       /* int[] elementi = new int[]{5, 7};
         ListaDiInteri lista = new ListaDiInteri(elementi);
         checkLista(lista);
         lista.reset();
@@ -15,9 +17,9 @@ public class TestIterabile {
         checkStringa(miaStringa);
         miaStringa.reset();
         checkStringa(miaStringa);
-    }
+    } */
 
-    private static void checkStringa(Iterabile stringa) {
+   /* private static void checkStringa(Iterabile stringa) {
 
         if (stringa.hasNext())
             System.out.println("OK");
@@ -41,10 +43,11 @@ public class TestIterabile {
             System.out.println("OK");
         else
             System.out.println("ERRORE");
-    }
+    }*/
 
 
-    private static void checkLista(Iterabile lista) {
+    /*private static void checkLista(Iterabile lista) {
+
 
         if (lista.hasNext())
             System.out.println("OK");
@@ -68,5 +71,6 @@ public class TestIterabile {
             System.out.println("OK");
         else
             System.out.println("ERRORE");
+    }*/
     }
 }

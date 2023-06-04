@@ -1,4 +1,4 @@
-package model;
+package american_pizza.model;
 
 public class FranchisingMug extends Franchising {
 
