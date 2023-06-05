@@ -1,6 +1,4 @@
-package turista_facoltoso.exceptions;
-
-import lombok.NonNull;
+package esercizi.turista_facoltoso.exceptions;
 
 import java.time.LocalDate;
 

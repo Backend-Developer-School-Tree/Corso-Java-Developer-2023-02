@@ -1,16 +1,16 @@
-package turista_facoltoso.entities;
+package esercizi.turista_facoltoso.entities;
 
-import lombok.AllArgsConstructor;
+import esercizi.turista_facoltoso.exceptions.IllegalPeriodException;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
-import turista_facoltoso.exceptions.IllegalPeriodException;
+import esercizi.turista_facoltoso.exceptions.IllegalPeriodException;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Booking {
     @NonNull
@@ -18,6 +18,7 @@ public class Booking {
     private UUID id;
     @NonNull private LocalDate start;
     @NonNull private LocalDate end;
+    @NonNull private LocalDateTime time;
     @NonNull private Apartment apartment;
     @NonNull private User user;
 
@@ -27,6 +28,7 @@ public class Booking {
         this.id = UUID.randomUUID();
         this.start = start;
         this.end = end;
+        this.time = time;
         this.apartment = apartment;
         this.user = user;
     }

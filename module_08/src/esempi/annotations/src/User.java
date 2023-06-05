@@ -1,3 +1,5 @@
+package esempi.annotations.src;
+
 import lombok.*;
 
 @Getter(AccessLevel.PRIVATE)

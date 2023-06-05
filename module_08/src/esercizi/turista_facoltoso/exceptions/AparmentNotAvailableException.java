@@ -1,6 +1,7 @@
-package turista_facoltoso.exceptions;
+package esercizi.turista_facoltoso.exceptions;
 
-import turista_facoltoso.entities.Apartment;
+import esercizi.turista_facoltoso.entities.Apartment;
+import esercizi.turista_facoltoso.entities.Apartment;
 
 import java.time.LocalDate;
 

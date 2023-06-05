@@ -1,8 +1,9 @@
-package turista_facoltoso.entities;
+package esercizi.turista_facoltoso.entities;
 
+import esercizi.turista_facoltoso.exceptions.AvailabilitiesOverlapException;
 import lombok.*;
-import turista_facoltoso.exceptions.AvailabilitiesOverlapException;
-import turista_facoltoso.exceptions.IllegalPeriodException;
+import esercizi.turista_facoltoso.exceptions.AvailabilitiesOverlapException;
+import esercizi.turista_facoltoso.exceptions.IllegalPeriodException;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ public class Apartment {
     private int nBeds;  // >  0
     private int floor;  // >= 0
     private final List<Booking> bookings = new ArrayList<>();
-    private final List<Feedback> feedbacks = new ArrayList<>();
     private final List<Availability> availabilities = new ArrayList<>();
+    private final List<Feedback> feedbacks = new ArrayList<>();
 
     public void addBooking(Booking booking) { bookings.add(booking); }
 

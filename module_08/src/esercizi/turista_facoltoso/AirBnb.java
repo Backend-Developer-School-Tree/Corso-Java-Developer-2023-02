@@ -1,26 +1,27 @@
-package turista_facoltoso;
+package esercizi.turista_facoltoso;
 
-import turista_facoltoso.entities.Apartment;
-import turista_facoltoso.entities.Booking;
-import turista_facoltoso.entities.Host;
-import turista_facoltoso.entities.User;
-import turista_facoltoso.exceptions.AparmentNotAvailableException;
-import turista_facoltoso.exceptions.ApartmentAlreadyBookedException;
-import turista_facoltoso.exceptions.UserAlreadyExistsException;
-import turista_facoltoso.exceptions.UserNotFoundException;
+import esercizi.turista_facoltoso.entities.Apartment;
+import esercizi.turista_facoltoso.entities.Booking;
+import esercizi.turista_facoltoso.entities.Host;
+import esercizi.turista_facoltoso.entities.User;
+import esercizi.turista_facoltoso.exceptions.AparmentNotAvailableException;
+import esercizi.turista_facoltoso.exceptions.ApartmentAlreadyBookedException;
+import esercizi.turista_facoltoso.exceptions.UserAlreadyExistsException;
+import esercizi.turista_facoltoso.exceptions.UserNotFoundException;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class AirBnb {
     /**
      * Map from userId to User itself
      */
-    private Map<Integer, User> userMap = new HashMap<>();
+    private final Map<Integer, User> userMap = new HashMap<>();
     /**
      * Map from codiceHost to Host itself
      */
-    private Map<Integer, Host> hostMap = new HashMap<>();
+    private final Map<Integer, Host> hostMap = new HashMap<>();
 
     private Collection<User> getUsers() { return userMap.values(); }
     private Collection<Host> getHosts() { return hostMap.values(); }
@@ -64,11 +65,11 @@ public class AirBnb {
      * @param user utente da registrare
      * @throws UserAlreadyExistsException se un utente con lo stesso id è già registrato
      */
-    public void addUser(User user) throws UserAlreadyExistsException {
+    public User addUser(User user) throws UserAlreadyExistsException {
         if (userMap.containsKey(user.getId()))
             throw new UserAlreadyExistsException(user);
 
-        userMap.put(user.getId(), user);
+        return userMap.put(user.getId(), user);
     }
 
     /**
@@ -83,6 +84,127 @@ public class AirBnb {
 
         Host host = Host.fromUser(user);
         userMap.replace(host.getId(), host);
-        hostMap.put(host.getId(), host);
+        hostMap.put(host.getCodiceHost(), host);
+    }
+
+    /**
+     * Ritorna le abitazioni corrispondenti al codice host specificato
+     */
+    public Collection<Apartment> getApartments(int codiceHost) throws UserNotFoundException {
+        Host host = hostMap.get(codiceHost);
+        if (host == null) throw new UserNotFoundException();
+
+        return host.getApartments();
+    }
+
+    public Collection<Apartment> getApartments(Host host) throws UserNotFoundException {
+        return getApartments(host.getCodiceHost());
+    }
+
+    /**
+     * Ritorna l'ultima (più recente) prenotazione effettuata dall'utente con l'id specificato,
+     * null se l'utente non ha effettuato alcuna prenotazione
+     */
+    public Booking getLastBooking(int userId) throws UserNotFoundException {
+        User user = userMap.get(userId);
+        if (user == null) throw new UserNotFoundException();
+
+        Booking maxBooking = null;
+        LocalDateTime maxTime = null;
+        for (Booking booking : user.getBookings()) {
+            if (maxBooking == null || booking.getTime().isAfter(maxTime)) {
+                maxBooking = booking;
+                maxTime = booking.getTime();
+            }
+        }
+        return maxBooking;
+    }
+
+    public Booking getLastBooking(User user) throws UserNotFoundException {
+        return getLastBooking(user.getId());
+    }
+
+    /**
+     * Ritorna l'appartamento più gettonato nell'ultimo mese
+     */
+    public Apartment getMostPopularApartment() {
+        return getMostPopularApartment(LocalDateTime.now().minusDays(30));
+    }
+
+    public Apartment getMostPopularApartment(LocalDateTime fromDate) {
+        int maxBookings = 0;
+        Apartment maxApartment = null;
+        // mappa per contare il numero di prenotazioni totali rispetto ad ogni appartamento
+        Map<Apartment, Integer> bookingsCounter = new HashMap<>();
+
+        for (Host host : getHosts()) {
+            for (Apartment apartment : host.getApartments()) {
+                for (Booking booking : apartment.getBookings()) {
+                    // non consideriamo le prenotazioni effettuate più di tot mesi fa
+                    if (fromDate.isBefore(booking.getTime())) continue;
+
+                    // aggiorniamo il numero di prenotazioni effettuate negli ultimi tot mesi per l'appartamento
+                    Integer bookingsCount = bookingsCounter.get(apartment);
+                    if (bookingsCounter.containsKey(apartment))
+                        bookingsCounter.put(apartment, 1);
+                    else
+                        bookingsCounter.replace(apartment, bookingsCount + 1);
+
+                    if (maxApartment == null || bookingsCount > maxBookings) {
+                        maxApartment = apartment;
+                        maxBookings = bookingsCount;
+                    }
+                }
+            }
+        }
+        return maxApartment;
+    }
+
+    /**
+     * Ritorna l'host con più prenotazioni nell'ultimo mese
+     */
+    public Host getMostPopularHost() {
+        return getMostPopularHost(LocalDateTime.now().minusDays(30));
+    }
+
+    public Host getMostPopularHost(LocalDateTime fromDate) {
+        int maxBookings = 0;
+        Host maxHost = null;
+        // mappa per contare il numero di prenotazioni totali rispetto ad ogni host
+        Map<Host, Integer> bookingsCounter = new HashMap<>();
+
+        for (Host host : getHosts()) {
+            for (Apartment apartment : host.getApartments()) {
+                for (Booking booking : apartment.getBookings()) {
+                    // non consideriamo le prenotazioni effettuate più di tot mesi fa
+                    if (fromDate.isBefore(booking.getTime())) continue;
+
+                    // aggiorniamo il numero di prenotazioni effettuate negli ultimi tot mesi per l'appartamento
+                    Integer bookingsCount = bookingsCounter.get(host);
+                    if (bookingsCounter.containsKey(host))
+                        bookingsCounter.put(host, 1);
+                    else
+                        bookingsCounter.replace(host, bookingsCount + 1);
+
+                    if (maxHost == null || bookingsCount > maxBookings) {
+                        maxHost = host;
+                        maxBookings = bookingsCount;
+                    }
+                }
+            }
+        }
+        return maxHost;
+    }
+
+    public List<Host> getSuperHosts() {
+
+    }
+
+    public List<User> getTopFiveUsers() {
+
+    }
+
+    public long getAverageBedsNumber() {
+
     }
 }

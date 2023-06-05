@@ -1,12 +1,12 @@
-package turista_facoltoso.entities;
+package esercizi.turista_facoltoso.entities;
 
+import esercizi.turista_facoltoso.exceptions.ApartmentNotFoundException;
+import esercizi.turista_facoltoso.exceptions.AvailabilitiesOverlapException;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import turista_facoltoso.exceptions.ApartmentNotFoundException;
-import turista_facoltoso.exceptions.AvailabilitiesOverlapException;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,9 +1,9 @@
-package turista_facoltoso.exceptions;
+package esercizi.turista_facoltoso.exceptions;
 
-import turista_facoltoso.entities.Apartment;
-import turista_facoltoso.entities.Booking;
-
-import java.time.LocalDate;
+import esercizi.turista_facoltoso.entities.Apartment;
+import esercizi.turista_facoltoso.entities.Booking;
+import esercizi.turista_facoltoso.entities.Apartment;
+import esercizi.turista_facoltoso.entities.Booking;
 
 public class ApartmentAlreadyBookedException extends Exception {
     public ApartmentAlreadyBookedException(Apartment apartment, Booking booking) {

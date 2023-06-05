@@ -1,7 +1,8 @@
-package turista_facoltoso.entities;
+package esercizi.turista_facoltoso.entities;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import esercizi.turista_facoltoso.exceptions.BookingNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +15,20 @@ import java.util.List;
 public class User {
     @NonNull
     @EqualsAndHashCode.Include
-    private Integer id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String address;
-    private final List<Booking> bookings = new ArrayList<>();
+    protected Integer id;
+    protected String email;
+    protected String firstName;
+    protected String lastName;
+    protected String address;
+    protected final List<Booking> bookings = new ArrayList<>();
 
     public void addBooking(Booking booking) { bookings.add(booking); }
+
+    public void leaveFeedback(Booking booking, Feedback feedback) throws BookingNotFoundException {
+        for (Booking booking1 : bookings) {
+            if (booking.equals(booking1))
+                booking.getApartment().addFeedback(feedback);
+        }
+        throw new BookingNotFoundException(this, booking);
+    }
 }

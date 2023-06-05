@@ -1,6 +1,6 @@
-package turista_facoltoso.exceptions;
+package esercizi.turista_facoltoso.exceptions;
 
-import turista_facoltoso.entities.User;
+import esercizi.turista_facoltoso.entities.User;
 
 public class UserNotFoundException extends Exception {
 
