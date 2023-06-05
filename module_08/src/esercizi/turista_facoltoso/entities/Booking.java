@@ -28,7 +28,7 @@ public class Booking {
         this.id = UUID.randomUUID();
         this.start = start;
         this.end = end;
-        this.time = time;
+        this.time = LocalDateTime.now();
         this.apartment = apartment;
         this.user = user;
     }

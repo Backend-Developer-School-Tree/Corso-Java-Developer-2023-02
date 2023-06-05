@@ -23,6 +23,7 @@ public class Apartment {
     private int nRooms; // >  0
     private int nBeds;  // >  0
     private int floor;  // >= 0
+    private Host host;
     private final List<Booking> bookings = new ArrayList<>();
     private final List<Availability> availabilities = new ArrayList<>();
     private final List<Feedback> feedbacks = new ArrayList<>();
