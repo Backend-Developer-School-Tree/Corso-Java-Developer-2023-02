@@ -1,4 +1,4 @@
-package module_09.src;
+package esempi.java_packages;
 
 public class Main {
     public static void main(String[] args) {
