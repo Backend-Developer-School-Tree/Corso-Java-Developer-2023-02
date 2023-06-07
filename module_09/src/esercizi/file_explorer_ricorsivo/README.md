@@ -7,15 +7,15 @@ Esempio di possibile visualizzazione della cartella [test_folder](test_folder):
 ```
 | test_folder
 |-- folder1
-|-- |-- file
+|-- |-- file.csv
 |-- folder2
 |-- |-- folder1
-|-- |-- |-- file1
-|-- |-- |-- file2
-|-- |-- |-- file3
-|-- |-- file1
-|-- file1
-|-- file2
+|-- |-- |-- file1.txt
+|-- |-- |-- file2.txt
+|-- |-- |-- file3.csv
+|-- |-- file1.md
+|-- file1.txt
+|-- file2.md
 ```
 
 Realizzare inoltre i seguenti metodi ricorsivi:
