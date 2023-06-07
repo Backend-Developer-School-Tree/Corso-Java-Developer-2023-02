@@ -20,7 +20,7 @@ Esempio di possibile visualizzazione della cartella [test_folder](test_folder):
 
 Realizzare inoltre i seguenti metodi ricorsivi:
 - Cerca un file all’interno della cartella
-- Cerca un file solo all’interno di una sottocartella (es. solo tra quelli interni a `/test_folder/folder2/`)
+- Cerca un file solo all’interno di una sottocartella (es. solo tra quelli interni a `/test_folder/folder2/` e sottocartelle)
 - Cerca all'interno della cartella tutti i file con l'estensione specificata
 - Cerca all'interno della cartella tutti i file con le estensioni fornite in input
 
