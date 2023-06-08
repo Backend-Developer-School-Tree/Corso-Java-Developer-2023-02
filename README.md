@@ -16,14 +16,15 @@ This repo collects all the exercises produced and gathered by [Marco Adriani](ht
 | 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src), [Approfondimento Comparable/Comparator](module_06/src/classifica_serie_a/TestComparison), [Esempio Iterable/Iterator](module_06/src/esempio_iterable/ListaDiInteri.java) |
 | 7      | Generics & Collections       | [Esercizi](module_07/src/esercizi)                                                                                                                                                                  |
 | 8      | Eccezioni e annotazioni      | [Esercizi](module_08/src/esercizi), [Esempi eccezioni](module_08/src/esempi/exceptions/src), [Esempio Lombok](module_08/src/esempi/annotations/src/User.java)                                       |
-| 9      | Input & Output               | [Esempi](module_09/src/esempi), [Esercizi](module_09/src/esercizi)                                                                                                                                  |
-
-<!--| 10     | Design Patterns   | [Esempi](module_10/src/esempi), [Esercizi](module_10/src) |
-| 11     | Java Stream                  | [Esercizi](module_11)                                                                                                                                                                               |
-| 12     | Database                     | [Esempi](module_12/src/esempi), [Esercitazione AndiamoATeatro](module_12/src/AndiamoATeatro.pdf)                                                                                                    |
-| 13     | API                          | [Esercizi](module_13/src)                                                                                                                                                                           |
-| 14     | Spring                       | [Esercizi](module_14/src)                                                                                                                                                                           |
-| 18     | Test                         | [Esercizi](module_18/src)                                                                                                                                                                           |
+| 9      | Gestione I/O - Packages      | [Esempi](module_09/src/esempi), [Esercizi](module_09/src/esercizi)                                                                                                                                  |
+| 10     | Design Patterns              | [Esempi](module_10/src/esempi/), [Esercizi](module_10/src/esercizi/)                                                                                                                                |
+| 11     | Ricorsione                   |                                                                                                                                                                                                     |
+<!--
+| 12     | Java Stream                  | [Esercizi](module_12)                                                                                                                                                                               |
+| 13     | Database                     | [Esempi](module_13/src/esempi), [Esercitazione AndiamoATeatro](module_13/src/AndiamoATeatro.pdf)                                                                                                    |
+| 14     | API                          | [Esercizi](module_14/src)                                                                                                                                                                           |
+| 15     | Spring                       | [Esercizi](module_15/src)                                                                                                                                                                           |
+| 16     | Test                         | [Esercizi](module_16/src)                                                                                                                                                                           |
 -->
 
 <img src="assets/treelogo.png" height="75">
