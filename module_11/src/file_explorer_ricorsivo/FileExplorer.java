@@ -1,4 +1,4 @@
-package esercizi.file_explorer_ricorsivo;
+package file_explorer_ricorsivo;
 
 import java.io.IOException;
 import java.nio.file.Files;
