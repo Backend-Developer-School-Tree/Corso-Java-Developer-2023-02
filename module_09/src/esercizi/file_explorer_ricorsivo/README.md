@@ -1,4 +1,4 @@
-# File explorer ricorsivo 🛵📁
+# File explorer ricorsivo 🏍📁
 
 Si realizzi una classe FileExplorer, costruita a partire dal percorso di una cartella esistente,
 dotata di un metodo `toString()` che ne visualizzi ricorsivamente il contenuto.
