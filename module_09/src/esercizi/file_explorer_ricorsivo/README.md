@@ -1,6 +1,6 @@
 # File explorer ricorsivo 🛵📁
 
-Si realizzi una classe Cartella, costruita a partire dal percorso di una cartella reale,
+Si realizzi una classe FileExplorer, costruita a partire dal percorso di una cartella esistente,
 dotata di un metodo `toString()` che ne visualizzi ricorsivamente il contenuto.
 
 Esempio di possibile visualizzazione della cartella [test_folder](test_folder):
