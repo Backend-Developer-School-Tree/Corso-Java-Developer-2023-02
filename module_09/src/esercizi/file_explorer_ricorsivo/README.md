@@ -5,17 +5,17 @@ dotata di un metodo `toString()` che ne visualizzi ricorsivamente il contenuto.
 
 Esempio di possibile visualizzazione della cartella [test_folder](test_folder):
 ```
-|-- test_folder
+test_folder
+|-- file1.txt
+|-- file2.md
+|-- folder1
+|-- |-- file.csv
+|-- folder2
+|-- |-- file1.md
 |-- |-- folder1
-|-- |-- |-- file.csv
-|-- |-- folder2
-|-- |-- |-- folder1
-|-- |-- |-- |-- file1.txt
-|-- |-- |-- |-- file2.txt
-|-- |-- |-- |-- file3.csv
-|-- |-- |-- file1.md
-|-- |-- file1.txt
-|-- |-- file2.md
+|-- |-- |-- file1.txt
+|-- |-- |-- file2.txt
+|-- |-- |-- file3.csv
 ```
 
 Realizzare inoltre i seguenti metodi ricorsivi:
