@@ -18,7 +18,7 @@ This repo collects all the exercises produced and gathered by [Marco Adriani](ht
 | 8      | Eccezioni e annotazioni      | [Esercizi](module_08/src/esercizi), [Esempi eccezioni](module_08/src/esempi/exceptions/src), [Esempio Lombok](module_08/src/esempi/annotations/src/User.java)                                       |
 | 9      | Gestione I/O - Packages      | [Esempi](module_09/src/esempi), [Esercizi](module_09/src/esercizi)                                                                                                                                  |
 | 10     | Design Patterns              | [Esempi](module_10/src/esempi/), [Esercizi](module_10/src/esercizi/)                                                                                                                                |
-| 11     | Ricorsione                   | [Esercizio File Explorer](module_10/src/file_explorer_ricorsivo/), [Stringa palindroma ricorsiva](module_10/src/stringa_palindroma/)                                                                |
+| 11     | Ricorsione                   | [Esercizio File Explorer](module_11/src/file_explorer_ricorsivo/), [Stringa palindroma ricorsiva](module_11/src/stringa_palindroma/)                                                                |
 <!--
 | 12     | Java Stream                  | [Esercizi](module_12)                                                                                                                                                                               |
 | 13     | Database                     | [Esempi](module_13/src/esempi), [Esercitazione AndiamoATeatro](module_13/src/AndiamoATeatro.pdf)                                                                                                    |
