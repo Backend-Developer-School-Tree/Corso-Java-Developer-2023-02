@@ -18,9 +18,9 @@ System.out.println(finalString);
 ```
 
 La classe `MyStringBuilder` dovrà quindi implementare almeno:
-- la possibilità di costruire una `MyString` a partire da una stringa o partendo da zero
+- la possibilità di creare un'istanza a partire da una stringa, da un carattere o partendo da zero
 - un metodo `append` che consenta di aggiungere una stringa o un carattere all'istanza attuale 
-- un metodo `toString` che si occupi di costruire e restituire l'istanza finale della classe `MyString`
+- un metodo `toString` che si occupi di restituire la stringa completa
 
 E consentire la corretta esecuzione del seguente codice:
 
