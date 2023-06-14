@@ -20,7 +20,7 @@ PLUS 🏍: gestire, per ogni persona, la lista dei figli ed implementare un meto
  ```
  andrea rossi -> [cristina, giorgio]
  andrea bianchi -> [mario]
- getFigli("andrea") -> [cristina, giorgio, mario]
+ getChildren("andrea") -> [cristina, giorgio, mario]
  ```
  
  Nota: svolgere ciascun punto sia con riferimenti a metodi che lambda
