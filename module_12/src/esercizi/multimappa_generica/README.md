@@ -1,5 +1,5 @@
 # Multimappa generica 🛵
-Una multimappa è una mappa che ammette più valori a fronte di una data
+Una multimappa è una mappa che ammette più valori (dello stesso tipo) a fronte di una data
 chiave. Creare una classe MultiMappa generica sul tipo di chiavi e valori.
 
 La classe implementa i seguenti metodi:
