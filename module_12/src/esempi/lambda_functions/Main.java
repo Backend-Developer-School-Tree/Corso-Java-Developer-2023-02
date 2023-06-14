@@ -59,7 +59,7 @@ public class Main {
                 .collect(Collectors.toMap(s -> s.charAt(0), Function.identity()));
 
         Map<String, Integer> mappa2 = list.stream()
-                        .collect(Collectors.toMap(Function.identity(), String::length));
+                .collect(Collectors.toMap(Function.identity(), String::length));
 
         System.out.println(mappa);
         System.out.println(mappa2);
