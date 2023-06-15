@@ -27,10 +27,12 @@ public class CompagniaSharedMobility {
     // altre funzionalità richieste ...
 
     public static void main(String[] args) throws IOException {
+        /*
         new CompagniaSharedMobility(
                 new UtenteDao(),
                 new VeicoloDao(),
                 new NoleggioDao()
         );
+         */
     }
 }
