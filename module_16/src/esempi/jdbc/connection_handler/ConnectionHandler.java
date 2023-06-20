@@ -33,8 +33,8 @@ public class ConnectionHandler implements AutoCloseable {
             // Per Logging
             System.out.println("Host name: " + dbProperties.getProperty("host"));
             System.out.println("Database name: " + dbProperties.getProperty("dbName"));
-            System.out.println("Username: " + dbProperties.getProperty("dbUser"));
-            System.out.println("DB Password: " + dbProperties.getProperty("dbPwd"));
+            System.out.println("Username: " + dbProperties.getProperty("user"));
+            System.out.println("DB Password: " + dbProperties.getProperty("password"));
             System.out.println("DB Port: " + dbProperties.getProperty("dbPort"));
 
         } catch (IOException e) {
