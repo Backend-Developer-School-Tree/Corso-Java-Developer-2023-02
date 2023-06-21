@@ -1,0 +1,148 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.6
+-- Dumped by pg_dump version 14.1
+
+-- Started on 2023-06-21 09:53:25 CEST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3580 (class 1262 OID 48171)
+-- Name: myusers; Type: DATABASE; Schema: -; Owner: postgres
+--
+
+CREATE DATABASE myusers WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.UTF-8';
+
+
+ALTER DATABASE myusers OWNER TO postgres;
+
+\connect myusers
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3 (class 2615 OID 2200)
+-- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA public;
+
+
+ALTER SCHEMA public OWNER TO postgres;
+
+--
+-- TOC entry 3581 (class 0 OID 0)
+-- Dependencies: 3
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 210 (class 1259 OID 48173)
+-- Name: siteusers; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.siteusers (
+    id integer NOT NULL,
+    name character varying(25),
+    lastname character varying(25),
+    birthdate date
+);
+
+
+ALTER TABLE public.siteusers OWNER TO postgres;
+
+--
+-- TOC entry 209 (class 1259 OID 48172)
+-- Name: siteusers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.siteusers_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.siteusers_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 3582 (class 0 OID 0)
+-- Dependencies: 209
+-- Name: siteusers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.siteusers_id_seq OWNED BY public.siteusers.id;
+
+
+--
+-- TOC entry 3431 (class 2604 OID 48176)
+-- Name: siteusers id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.siteusers ALTER COLUMN id SET DEFAULT nextval('public.siteusers_id_seq'::regclass);
+
+
+--
+-- TOC entry 3574 (class 0 OID 48173)
+-- Dependencies: 210
+-- Data for Name: siteusers; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.siteusers VALUES (1, 'Davide', 'Fella', '2023-06-20');
+INSERT INTO public.siteusers VALUES (2, 'Luigi', 'Mario', '2023-06-23');
+
+
+--
+-- TOC entry 3583 (class 0 OID 0)
+-- Dependencies: 209
+-- Name: siteusers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.siteusers_id_seq', 2, true);
+
+
+--
+-- TOC entry 3433 (class 2606 OID 48178)
+-- Name: siteusers siteusers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.siteusers
+    ADD CONSTRAINT siteusers_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2023-06-21 09:53:25 CEST
+
+--
+-- PostgreSQL database dump complete
+--
+
